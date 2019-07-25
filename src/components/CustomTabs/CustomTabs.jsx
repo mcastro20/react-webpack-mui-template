@@ -51,7 +51,7 @@ class CustomTabs extends React.Component {
               indicator: classes.displayNone,
               scrollButtons: classes.displayNone
             }}
-            scrollable
+            variant="scrollable"
             scrollButtons="auto"
           >
             {tabs.map((prop, key) => {
@@ -65,8 +65,6 @@ class CustomTabs extends React.Component {
                 <Tab
                   classes={{
                     root: classes.tabRootButton,
-                    labelContainer: classes.tabLabelContainer,
-                    label: classes.tabLabel,
                     selected: classes.tabSelected,
                     wrapper: classes.tabWrapper
                   }}

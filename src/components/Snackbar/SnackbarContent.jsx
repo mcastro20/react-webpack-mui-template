@@ -50,7 +50,7 @@ SnackbarContent.propTypes = {
   message: PropTypes.node.isRequired,
   color: PropTypes.oneOf(["info", "success", "warning", "danger", "primary"]),
   close: PropTypes.bool,
-  icon: PropTypes.func
+  icon: PropTypes.object
 };
 
 export default withStyles(snackbarContentStyle)(SnackbarContent);
