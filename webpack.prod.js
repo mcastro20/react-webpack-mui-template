@@ -25,7 +25,16 @@ module.exports = merge(common, {
           removeComments: true
         }
       })
-    ]
+    ],
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+          name: 'vendor',
+          chunks: 'all',
+        }
+      }
+    }
   },
   plugins: [
     new MiniCssExtractPlugin({ filename: "[name].[contentHash].css" }),
